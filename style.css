@@ -1,22 +1,69 @@
-body {
-	margin: 0;
-	padding: 0;
-	
-	background-color: #385AD1;
-}
-
+/*defaulting styles that can be changed later*/
 a:link {
 	text-decoration: none;
 }
 
+.float-right {
+	float: right;
+}
+
+.float-left {
+	float: left;
+}
+
+.clear-left {
+	clear: left;
+}
+
+.clear-right {
+	clear: right;
+}
+
+.centered-text {
+	text-align: center;
+}
+
+.flex-container {
+	display: flex;
+}
+
+.flex {
+	flex: 1;
+}
+
+.hidden {
+	display: none;
+}
+
+p, h4 {
+	margin: 0 0 10px 0;
+}
+
+
+
+/*begin overall page styles*/
+body {
+	margin: 0;
+	padding: 0;
+	
+	background-color: #1F6299;
+	
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	
+	line-height: 20px;
+}
+
+
+
+/*header and header content styles*/
 header {
-	background-color: #275BB5;
+	background-color: #1B5585;
 	color: white;
 	padding: 10px;
 	border-bottom: 1px solid #38A4B5;
 	
 	font-size: 8pt;
-	font-family: Arial, Helvetica, sans-serif;
 	
 	text-align: center;
 }
@@ -27,6 +74,160 @@ header span {
 }
 
 header span:first-child, header span:first-child + span {
-	border-right: 1px solid white;
+	border-right: 1px solid #38A4B5;
 	padding: 0 8px;
 }
+
+
+/*main article styles*/
+article {
+	width: 930px;
+	margin: 20px auto;
+	padding: 30px;
+	box-sizing: border-box;
+	
+	background-color: white;
+	
+	box-shadow: 0 0 10px black;
+}
+
+
+/*menu section*/
+.top-logo {
+	float: left;
+	
+	margin-right: 40px;
+	margin-bottom: 30px;
+}
+
+.menu {
+	margin: 20px 20px;
+}
+
+.menu a:link {
+	color: #1F6299;
+}
+
+.menu a:link.open-page {
+	color: #38A4B5;
+}
+
+nav {
+	flex: 1;
+	
+	text-align: center;
+	font-size: 16pt;
+}
+
+.open-page {
+	color: #38A4B5;
+}
+
+
+/*banner section styles*/
+.banner {
+	width: 100%;
+}
+
+.slide-selector {
+	margin: 20px;
+	
+	justify-content: center;
+}
+
+.selectors {
+	width: 23px;
+	height: 18px;
+	margin: 1px;
+	
+	background-color: lightgray; 
+	
+	cursor: pointer; 
+}
+
+.selector-active {
+	background-color: gray;
+}
+
+
+
+/*showcase section*/
+.showcase {
+	margin: 20px 0;
+	
+	justify-content: space-around;
+}
+
+.showcase-item {
+	width: 275px;
+	
+	padding: 10px;
+}
+
+.img-holder {
+	margin-bottom: 40px;
+}
+
+.showcase-item div + p {
+	height: 80px;
+}
+
+.img-holder + p + p {
+	cursor: pointer;
+	font-weight: bold;
+}
+
+
+/*other parts of the page*/
+.intro > div > img {
+	cursor: pointer;
+}
+
+
+iframe {
+	width: 100%;
+	
+	margin: 50px 0;
+}
+
+
+
+
+/*footer and containing elements*/
+footer {
+	width: 930px;
+	
+	margin: 0 auto;
+	margin-bottom: 50px;
+	
+	position: relative;
+	top: -5px;
+	
+	color: white;
+	font-size: 8pt;
+}
+
+footer span {
+	display: inline-block;
+}
+
+
+.menu-bottom {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.menu-bottom li {
+	display: inline-block;
+	
+	padding: 0 10px;
+	border-right: 1px solid white;
+}
+
+.menu-bottom li:last-child {
+	padding-right: 0;
+	border-right: 0 none white;
+}
+
+
