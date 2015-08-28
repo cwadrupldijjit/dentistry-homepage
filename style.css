@@ -228,6 +228,10 @@ footer span {
 	margin: 0;
 }
 
+footer div:nth-child(3) {
+	text-align: center;
+}
+
 .menu-bottom li {
 	display: inline-block;
 	
@@ -244,6 +248,7 @@ footer span {
 
 /*begin media queries*/
 @media (max-width: 945px) {
+	/*overriding some of the default properties*/
 	body {
 		font-size: 14pt;
 	}
@@ -258,6 +263,9 @@ footer span {
 		width: 100%;
 	}
 	
+	
+	/*starting from the top going down the page*/
+	/*header elements*/
 	header {
 		font-size: 16pt;
 	}
@@ -278,6 +286,8 @@ footer span {
 		max-width: 400px;
 	}
 	
+	
+	/*beginning on the main article*/
 	.menu {
 		flex-wrap: wrap;
 		
@@ -298,6 +308,8 @@ footer span {
 		text-shadow: 0 0 20px white, 0 0 20px white, 0 0 5px black;
 	}
 	
+	
+	/*changes in the showcase section*/
 	.showcase {
 		flex-wrap: wrap;
 	}
@@ -316,6 +328,39 @@ footer span {
 	
 	.showcase-item div + p {
 		height: auto;
+	}
+	
+	
+	/*changes in the footer section*/
+	footer {
+		font-size: 14pt;
+		padding: 0 30px;
+		
+		line-height: 30px;
+	}
+	
+	footer > span {
+		/*float: none;*/
+		display: block;
+		outline: 5px solid black;
+	}
+	
+	footer div:nth-child(2) {
+		float: none;
+		display: block;
+		clear: left;
+	}
+	
+	footer li {
+		padding: 10px 10px;
+	}
+	
+	footer li:first-child {
+		padding-left: 0;
+	}
+	
+	footer div:nth-child(3) {
+		text-align: left;
 	}
 }
 
