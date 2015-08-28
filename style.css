@@ -39,6 +39,10 @@ p, h4 {
 	margin: 0 0 10px 0;
 }
 
+img {
+	width: 100%;
+}
+
 
 
 /*begin overall page styles*/
@@ -78,6 +82,10 @@ header span:first-child, header span:first-child + span {
 	padding: 0 8px;
 }
 
+header span:nth-child(3) {
+	display: none;
+}
+
 
 /*main article styles*/
 article {
@@ -94,6 +102,8 @@ article {
 
 /*menu section*/
 .top-logo {
+	width: 316px;
+	
 	float: left;
 	
 	margin-right: 40px;
@@ -169,7 +179,7 @@ nav {
 }
 
 .showcase-item div + p {
-	height: 80px;
+	height: 100px;
 }
 
 .img-holder + p + p {
@@ -231,3 +241,91 @@ footer span {
 }
 
 
+
+/*begin media queries*/
+@media (max-width: 945px) {
+	body {
+		font-size: 14pt;
+	}
+	
+	p, h4 {
+		line-height: 30px;
+		
+		margin: 30px 0;
+	}
+	
+	footer, article {
+		width: 100%;
+	}
+	
+	header {
+		font-size: 16pt;
+	}
+	
+	header span:first-child {
+		display: none;
+	}
+	
+	header span:nth-child(3) {
+		display: inline;
+	}
+	
+	.top-logo {
+		float: none;
+		display: block;
+		margin: 0 auto;
+		width: 90%;
+		max-width: 400px;
+	}
+	
+	.menu {
+		flex-wrap: wrap;
+		
+		margin: 20px auto;
+		justify-content: center;
+	}
+	
+	nav {
+		flex: none;
+		width: 95px;
+		padding: 15px 2px;
+		/*background-color: lightgray;*/
+	}
+	
+	nav:hover {
+		/*background-color: gray;*/
+		
+		text-shadow: 0 0 20px white, 0 0 20px white, 0 0 5px black;
+	}
+	
+	.showcase {
+		flex-wrap: wrap;
+	}
+	
+	.showcase-item {
+		flex: none;
+		
+		width: 100%;
+	}
+	
+	.img-holder {
+		max-width: 275px;
+		
+		margin: 0 auto;
+	}
+	
+	.showcase-item div + p {
+		height: auto;
+	}
+}
+
+@media (max-width: 600px) {
+	.showcase {
+		flex-direction: column;
+	}
+	
+	.showcase-item {
+		flex: none;
+		width: 100%;
+	}
+}
